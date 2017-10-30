@@ -4,4 +4,4 @@ plan:
   statement: markdowns/welcome.md
 projects:
  "my-delphi-projects":
-   runner: frolvlad/alpine-fpc:latest
+   runner: frolvlad/alpine-fpc:full
