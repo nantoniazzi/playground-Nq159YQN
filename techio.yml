@@ -2,3 +2,6 @@ title: Custom Template
 plan:
 - title: Welcome
   statement: markdowns/welcome.md
+projects:
+ "my-delphi-projects":
+   runner: frolvlad/alpine-fpc:latest
