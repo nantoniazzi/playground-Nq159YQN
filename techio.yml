@@ -1,7 +1,9 @@
-title: Custom Template
+title: Delphi Template
 plan:
 - title: Welcome
   statement: markdowns/welcome.md
 projects:
- "my-delphi-projects":
-   runner: frolvlad/alpine-fpc:full
+  my-delphi-projects:
+    runner:
+      name: frolvlad/alpine-fpc
+      version: full
