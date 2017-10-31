@@ -1,13 +1,24 @@
 # Bienvenue au tutoriel Delphi pour codingame !
 
-Ce tutoriel a pour but de vous rappeler quelques principes de base de la programmation Pascal Delphi, ainsi qu'une classe particulièrement utile dans les exercices codingame (TStringList).
+Ce tutoriel a pour but de vous rappeler quelques principes de base de la programmation Pascal Delphi, ainsi que le fonctionnement d'une classe particulièrement utile dans les exercices codingame (`TStringList`).
 
 Vous pouvez tester les exemples ci-dessous en les recopiant dans la fenêtre ci-dessous et en cliquant sur *Run*.
+
+## Un peu plus Delphi
 
 Pour être plus proche du Delphi vous devez ajouter la directive suivante au début du programme :
 ```pascal
 {$MODE DELPHI} 
 ```
+
+## Pour écrire sur les sorties standards
+
+La procédure `writeln` permet d'écrire sur les sorties standard `StdOut` (par défaut) et `StdErr` :
+```pascal
+writeln('Résultat sur StdOut');
+writeln(StdErr, 'trace sur StdErr');
+```
+
 
 
 Please refer to the [documentation](https://tech.io/doc) to learn more about adding programming exercises within your contribution.
