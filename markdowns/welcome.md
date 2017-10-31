@@ -5,14 +5,22 @@ Ce tutoriel a pour but de vous rappeler quelques principes de base de la program
 Vous pouvez tester les exemples ci-dessous en les recopiant dans la fenêtre ci-dessous et en cliquant sur *Run*.
 
 ## Quelques rappels du Pascal
+- Pascal est _case insensitive_ donc la variable `Liste` est la même que `LISTE` et la même que `liste`
 - les instructions sont séparées par des `;`
 - les variables doivent être déclarées dans une section `var` avant d'être utilisées dans la section `begin...end` et ça vaut _même pour les indices de boucle !_
 - les chaînes de caractères litérales sont entre `'` et pas entre `"` 
+- l'opérateur de concaténation de chaînes de caractères est `+`
+```
+writeln('La valeur de NOM est ' + NOM);
+```
 - la fonction `Chr(n)` permet d'obtenir le caractère de code `n`
 ```
-writeln(Chr(97))
+writeln(Chr(97));
 ```
 - la fonction `Ord('x')` permet d'obtenir le code du caractère `'x'`
+```
+writeln(Ord('a'));
+```
 - la fonction `IntToStr(N)` permet d'obtenir la chaîne de caractères contenant la réprésentation décimale de l'entier `N`
 
 
@@ -23,9 +31,20 @@ Pour être plus proche du Delphi vous devez ajouter la directive suivante au dé
 {$MODE DELPHI} 
 ```
 
+## pour lire sur l'entrée standard
+
+La procédure `readln` permet de lire une ligne sur l'entrée standard et la retourne dans la variable passée en paramètre
+```
+var
+  Line : String;
+begin
+  readln(Line);
+end;
+```
+
 ## Pour écrire sur les sorties standards
 
-La procédure `writeln` permet d'écrire sur les sorties standard `StdOut` (par défaut) et `StdErr` :
+La procédure `writeln` permet d'écrire une ligne sur les sorties standard `StdOut` (par défaut) et `StdErr` :
 ```pascal
 writeln('Résultat sur StdOut');
 writeln(StdErr, 'trace sur StdErr');
