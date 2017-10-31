@@ -4,6 +4,15 @@ Ce tutoriel a pour but de vous rappeler quelques principes de base de la program
 
 Vous pouvez tester les exemples ci-dessous en les recopiant dans la fenêtre ci-dessous et en cliquant sur *Run*.
 
+## Quelques rappels du Pascal
+- les instructions sont séparées par des `;`
+- les variables doivent être déclarées dans une section `var` avant d'être utilisées dans la section `begin...end` et ça vaut _même pour les indices de boucle !_
+- les chaînes de caractères litérales sont entre `'` et pas entre `"` 
+- la fonction `Chr(n)` permet d'obtenir le caractère de code `n`
+- la fonction `Ord('x')` permet d'obtenir le code du caractère `'x'`
+- la fonction `IntToStr(N)` permet d'obtenir la chaîne de caractères contenant la réprésentation décimale de l'entier `N`
+
+
 ## Un peu plus Delphi
 
 Pour être plus proche du Delphi vous devez ajouter la directive suivante au début du programme :
