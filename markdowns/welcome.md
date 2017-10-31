@@ -1,6 +1,13 @@
 # Bienvenue au tutoriel Delphi pour codingame !
 
-This Basic template lets you get started quickly with a simple working example. If it is your first contribution then you should have a look at the [Getting Started](https://tech.io/doc/getting-started-create-playground) document.
+Ce tutoriel a pour but de vous rappeler quelques principes de base de la programmation Pascal Delphi, ainsi qu'une classe particulièrement utile dans les exercices codingame (TStringList).
+
+Vous pouvez tester les exemples ci-dessous en les recopiant dans la fenêtre ci-dessous et en cliquant sur *Run*.
+
+Pour être plus proche du Delphi vous devez ajouter la directive suivante au début du programme :
+```pascal
+{$MODE DELPHI} 
+```
 
 
 Please refer to the [documentation](https://tech.io/doc) to learn more about adding programming exercises within your contribution.
