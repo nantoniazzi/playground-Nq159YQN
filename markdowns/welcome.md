@@ -89,7 +89,7 @@ Vous aurez rapidement besoin d'une structure flexible de type hashmap ou diction
 - la propriété `Count` retourne le nombre de chaînes dans la liste
 - la fonction `IndexOf` retourne l'indice (base 0) de la chaîne dans la liste ou _-1_ si elle n'est pas dans la liste
 - les `[]` permettent d'accéder à la chaîne à un indice donné (comme dans un tableau dynamique avec indice base 0)
-- la propriété `Text` (resp. `CommaText`) retourne une chaîne contenant toutes les chaînes de la liste séparées par des `'\n'` (resp. `','`)
+- la propriété `Text` (resp. `CommaText`) retourne une chaîne contenant toutes les chaînes de la liste séparées par des `'\n'` (resp. `','`), et peut même être utilisée pour initialiser la liste mais cela dépasse le cadre de ce simple tuto
 ```
 var
    Dict : TStringList;
