@@ -108,8 +108,8 @@ end;
 
 ## Documentation complémentaire
 
-- sur le type [array](http://wiki.freepascal.org/Array/fr)
-- sur la classe [TStringList](http://wiki.freepascal.org/TStringList-TStrings_Tutorial/fr)
+- sur le type [array](http://wiki.freepascal.org/Array/fr) et pour aller plus loin en [anglais](http://www.delphibasics.co.uk/RTL.asp?Name=Array)
+- sur la classe [TStringList](http://wiki.freepascal.org/TStringList-TStrings_Tutorial/fr) et pour aller plus loin [en anglais](http://www.delphibasics.co.uk/RTL.asp?Name=tstringlist)
 
 # Pour expérimenter
 
