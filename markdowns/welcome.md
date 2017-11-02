@@ -23,7 +23,7 @@ writeln(Chr(97));
 ```
 writeln(Ord('a'));
 ```
-- la fonction `IntToStr(N)` permet d'obtenir la chaîne de caractères contenant la réprésentation décimale de l'entier `N` (vous devez ajouter `uses sysutils;` au début de votre programme avant d'utiliser cette fonction
+- la fonction `IntToStr(N)` permet d'obtenir la chaîne de caractères contenant la réprésentation décimale de l'entier `N` ; la fonction `StrToInt(S)` permet d'obtenir la valeur décimale de l'entier dont la chaîne S contient la représentation décimale (vous devez ajouter `uses sysutils;` au début de votre programme avant d'utiliser ces fonctions)
 - l'instruction `break` permet d'interrompre la boucle directement englobante
 
 
