@@ -24,6 +24,7 @@ writeln(Chr(97));
 writeln(Ord('a'));
 ```
 - la fonction `IntToStr(N)` permet d'obtenir la chaîne de caractères contenant la réprésentation décimale de l'entier `N` (vous devez ajouter `uses sysutils;` au début de votre programme avant d'utiliser cette fonction
+- l'instruction `break` permet d'interrompre la boucle directement englobante
 
 
 ## Un peu plus Delphi
@@ -110,6 +111,7 @@ end;
 
 - sur le type [array](http://wiki.freepascal.org/Array/fr) et pour aller plus loin en [anglais](http://www.delphibasics.co.uk/RTL.asp?Name=Array)
 - sur la classe [TStringList](http://wiki.freepascal.org/TStringList-TStrings_Tutorial/fr) et pour aller plus loin [en anglais](http://www.delphibasics.co.uk/RTL.asp?Name=tstringlist)
+- si vous voulez définir des [fonctions ou procédures](http://www.delphibasics.co.uk/Article.asp?Name=Routines) (en anglais)
 
 # Pour expérimenter
 
