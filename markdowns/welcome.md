@@ -7,6 +7,7 @@ Vous pouvez tester les exemples ci-dessous en les recopiant dans la fenêtre ci-
 ## Quelques rappels du Pascal
 - Pascal est _case insensitive_ donc la variable `Liste` est la même que `LISTE` et la même que `liste`
 - les instructions sont séparées par des `;`
+- tout ce qui est après `//` sur une ligne est un commentaire (sauf à l'intérieur d'une chaîne de caractères)
 - l'opérateur d'affectation est `:=`
 - l'opérateur de comparaison est `=`
 - les variables doivent être déclarées dans une section `var` avant d'être utilisées dans la section `begin...end` et ça vaut _même pour les indices de boucle !_
@@ -33,7 +34,7 @@ Pour être plus proche du Delphi vous devez ajouter la directive suivante au dé
 {$MODE DELPHI} 
 ```
 
-## pour lire sur l'entrée standard
+## Pour lire sur l'entrée standard
 
 La procédure `readln` permet de lire une ligne sur l'entrée standard et la retourne dans la variable passée en paramètre
 ```
@@ -63,18 +64,49 @@ var
 ```
 begin
    Nombres[5] := 5000;
+   ...
+end;
 ```
 - la fonction `Length` retourne le nombre d'éléments du tableau
 ```
    writeln(IntToStr(Length(Nombres)));
 ```
-- la déclaration d'un tableau dynamique dont la taille est définie ou modifiée avec l'opération `SetLength`
+- la déclaration d'un tableau dynamique dont la taille est définie ou modifiée avec la procédure `SetLength` et dont l'index va de `0` à `Length()-1`
 ```
 var
    Nombres : array of Integer;
+   I       : Integer;
 begin
    SetLength(Nombres, 10);
+   for I := 0 to Length(Nombres)-1 do
+   begin
+      Nombres[I] := I;
+   end;
+end;
 ```
+
+## Le couteau suisse : TStringList
+
+Vous aurez rapidement besoin d'une structure flexible de type hashmap ou dictionnaire clé/valeur. En Delphi vous pouvez utiliser `TStringList` pour remplir ce rôle de couteau suisse. Cette classe est très riche mais voici quelques cas d'usage simples à connaître :
+
+- avant l'ajout du premier élément, la structure doit être initialisée avec la fonction `TStringList.Create()` et lorsqu'elle n'est plus utilisée la mémoire allouée doit être libérée en utilisant la méthode `Free`.
+- les méthodes `Add` et `Append` ajoutent une chaîne à la liste
+- la fonction `IndexOf` retourne l'indice (base 0) de la chaîne dans la liste
+- les `[]` permettent d'accéder à la chaîne à un indice donné (comme dans un tableau dynamique avec indice base 0)
+```
+var
+   Dict : TStringList;
+begin
+   Dict := TStringList.Create();
+   Dict.Add('Un');
+   Dict.Add('Deux');
+   Dict.Add('Trois');
+   writeln('Deux est en position : ' + IntToStr(Dict.IndexOf('Deux')));
+   writeln('A la position 0 il y a : ' + Dict[0]);
+   Dict.Free;
+end;
+```
+
 
 ## Documentation complémentaire
 
