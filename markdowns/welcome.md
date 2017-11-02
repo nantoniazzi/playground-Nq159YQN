@@ -86,9 +86,10 @@ Vous aurez rapidement besoin d'une structure flexible de type hashmap ou diction
 - n'oubliez pas le `uses classes;` en début de votre programme pour avoir accès à ces classes
 - avant l'ajout du premier élément, la structure doit être initialisée avec la fonction `TStringList.Create()` et lorsqu'elle n'est plus utilisée la mémoire allouée doit être libérée en utilisant la méthode `Free`.
 - la méthode `Add` ajoute une chaîne à la liste
+- la propriété `Count` retourne le nombre de chaînes dans la liste
 - la fonction `IndexOf` retourne l'indice (base 0) de la chaîne dans la liste ou _-1_ si elle n'est pas dans la liste
 - les `[]` permettent d'accéder à la chaîne à un indice donné (comme dans un tableau dynamique avec indice base 0)
-- la propriété `Text` retourne une chaîne contenant toutes les chaînes de la liste séparées par des `\n` 
+- la propriété `Text` (resp. `CommaText`) retourne une chaîne contenant toutes les chaînes de la liste séparées par des `'\n'` (resp. `','`)
 ```
 var
    Dict : TStringList;
