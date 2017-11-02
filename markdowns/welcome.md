@@ -89,9 +89,10 @@ end;
 
 Vous aurez rapidement besoin d'une structure flexible de type hashmap ou dictionnaire clé/valeur. En Delphi vous pouvez utiliser `TStringList` pour remplir ce rôle de couteau suisse. Cette classe est très riche mais voici quelques cas d'usage simples à connaître :
 
+- n'oubliez pas le `uses classes;` en début de votre programme pour avoir accès à ces classes
 - avant l'ajout du premier élément, la structure doit être initialisée avec la fonction `TStringList.Create()` et lorsqu'elle n'est plus utilisée la mémoire allouée doit être libérée en utilisant la méthode `Free`.
 - les méthodes `Add` et `Append` ajoutent une chaîne à la liste
-- la fonction `IndexOf` retourne l'indice (base 0) de la chaîne dans la liste
+- la fonction `IndexOf` retourne l'indice (base 0) de la chaîne dans la liste ou _-1_ si elle n'est pas dans la liste
 - les `[]` permettent d'accéder à la chaîne à un indice donné (comme dans un tableau dynamique avec indice base 0)
 ```
 var
