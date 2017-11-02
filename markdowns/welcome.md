@@ -1,5 +1,4 @@
 # Bienvenue au tutoriel Delphi pour codingame !
-
 Ce tutoriel a pour but de vous rappeler quelques principes de base de la programmation Pascal Delphi, ainsi que le fonctionnement d'une classe particulièrement utile dans les exercices codingame (`TStringList`).
 
 Vous pouvez tester les exemples ci-dessous en les recopiant dans la fenêtre ci-dessous et en cliquant sur *Run*.
@@ -24,18 +23,16 @@ writeln(Chr(97));
 ```
 writeln(Ord('a'));
 ```
-- la fonction `IntToStr(N)` permet d'obtenir la chaîne de caractères contenant la réprésentation décimale de l'entier `N`
+- la fonction `IntToStr(N)` permet d'obtenir la chaîne de caractères contenant la réprésentation décimale de l'entier `N` (vous devez ajouter `uses sysutils;` au début de votre programme avant d'utiliser cette fonction
 
 
 ## Un peu plus Delphi
-
 Pour être plus proche du Delphi vous devez ajouter la directive suivante au début du programme :
 ```pascal
 {$MODE DELPHI} 
 ```
 
 ## Pour lire sur l'entrée standard
-
 La procédure `readln` permet de lire une ligne sur l'entrée standard et la retourne dans la variable passée en paramètre
 ```
 var
@@ -46,7 +43,6 @@ end;
 ```
 
 ## Pour écrire sur les sorties standards
-
 La procédure `writeln` permet d'écrire une ligne sur les sorties standard `StdOut` (par défaut) et `StdErr` :
 ```pascal
 writeln('Résultat sur StdOut');
@@ -54,7 +50,6 @@ writeln(StdErr, 'trace sur StdErr');
 ```
 
 ## Les tableaux
-
 - la déclaration d'un tableau statique
 ```
 var
@@ -86,14 +81,14 @@ end;
 ```
 
 ## Le couteau suisse : TStringList
-
 Vous aurez rapidement besoin d'une structure flexible de type hashmap ou dictionnaire clé/valeur. En Delphi vous pouvez utiliser `TStringList` pour remplir ce rôle de couteau suisse. Cette classe est très riche mais voici quelques cas d'usage simples à connaître :
 
 - n'oubliez pas le `uses classes;` en début de votre programme pour avoir accès à ces classes
 - avant l'ajout du premier élément, la structure doit être initialisée avec la fonction `TStringList.Create()` et lorsqu'elle n'est plus utilisée la mémoire allouée doit être libérée en utilisant la méthode `Free`.
-- les méthodes `Add` et `Append` ajoutent une chaîne à la liste
+- la méthode `Add` ajoute une chaîne à la liste
 - la fonction `IndexOf` retourne l'indice (base 0) de la chaîne dans la liste ou _-1_ si elle n'est pas dans la liste
 - les `[]` permettent d'accéder à la chaîne à un indice donné (comme dans un tableau dynamique avec indice base 0)
+- la propriété `Text` retourne une chaîne contenant toutes les chaînes de la liste séparées par des `\n` 
 ```
 var
    Dict : TStringList;
@@ -104,6 +99,7 @@ begin
    Dict.Add('Trois');
    writeln('Deux est en position : ' + IntToStr(Dict.IndexOf('Deux')));
    writeln('A la position 0 il y a : ' + Dict[0]);
+   writeln(Dict.Text);
    Dict.Free;
 end;
 ```
